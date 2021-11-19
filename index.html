@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <script src="js/persona.js"></script>
+    <script src="js/clientes.js"></script>
+    <script src="js/tabla.js"></script>
+    <link rel="stylesheet" href="css/Estilos.css">
+</head>
+<body>
+    <div id = "id_form_personas" class="Formulario">
+        <label>Id</label> <br>
+        <input type="text" id="id_input_id" class="Inputs" disabled> <br>
+        <br>
+        <label>Nombre</label> <br>
+        <input type="text" id="id_nombre" class="Inputs"> <br>
+        <br>
+        <label>Apellido</label> <br>
+        <input type="text" id="id_apellido" class="Inputs"> <br>
+        <br>
+        <div id="divSexo">
+            <label>Sexo</label> <br>  
+            <select name="sexo" id="id_sexo">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <br>
+        <label>Edad</label> <br>
+        <input type="text" id="id_edad" class="Inputs"> <br>
+        <br>
+        <br>
+        <div id="divBtn" class="divBtn">
+            <input type="button" value="Agregar" class="botonMod" id="btn_add" style="display: block;"/> 
+            <br>
+            <input type="button" value="Eliminar" class="botonDel" id="btn_delete" style="display: block;"/>                 
+            </div>
+            <br>
+            <input type="button" value="Limpiar" class="botonClean" id="btn_clean" style="display: block;"/>                 
+        </div>
+    </div>
+    <div id="id_div_filtros">
+        <label >Sexo</label> <br>
+        <select name="Sexo" id="id_select_sexo">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br> <br>
+    </div>
+    <div id="id_div_tabla"></div>
+    <div id="id_div_modal"></div>
+      
+    <div id="divSpinner" class="spinner" hidden></div> 
+</body>
+</html>

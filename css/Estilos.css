@@ -1,0 +1,115 @@
+.ButtonDiv
+{
+    display: flex;
+    align-items:flex-start;
+}
+
+.divBtn{
+    position:relative;
+}
+.botonMod
+{
+    padding: 13px;
+    background-color: #5db941;
+    fill:  #5db941;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 6px 13px #666666;
+    border-style: hidden;
+    left:1%;
+}
+.botonDel
+{
+    padding: 13px;
+    background-color: #f84563;
+    fill:  #f84563;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 6px 13px #666666;
+    border-style: hidden;
+    left:1%;
+}
+
+.botonClean
+{
+    padding: 13px;
+    background-color: #77a1ee;
+    fill:  #77a1ee;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 6px 13px #666666;
+    border-style: hidden;
+    left:1%;
+}
+
+.Tabla
+{
+    position: absolute;
+    border: 1px solid #52354d;
+    background-color: #f0c5e9;
+    width: 50%;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.Tabla td
+{
+    padding: 3px 2px;
+}
+
+.Tabla th
+{
+
+    background-color: #96678f;
+    padding: 3px 2px;
+
+}
+
+  .spinner {
+    position:static;
+    z-index: 11;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    border: 8px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    animation: spin 2s ease infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .Inputs
+{
+    padding: 3px;
+    border-style: none;
+    border-radius: 5px;
+    font:initial;
+    position:absolute;
+    left:1%;
+}
+
+
+
+.Formulario
+{
+    background-color: rgb(211, 239, 247);
+    /* display: flex;
+    justify-content:left;
+    align-items:flex-start;
+    flex-direction:column-reverse;
+    position: relative; */
+}
