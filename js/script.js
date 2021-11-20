@@ -31,11 +31,18 @@ function GetDataDelForm(){
     var apellido  = document.getElementById("id_apellido").value;
     var sexo = document.getElementById("id_sexo").value;
     var edad = document.getElementById("id_edad").value;
-
-    if(id != " "){
-        id = Cliente.CalcularIdCliente();
+    
+    if( nombre !== "" && apellido !== "" && sexo !== "" && edad !== "" ){
+        if(id === ""){
+            id = Cliente.CalcularIdCliente();
+        }
+        
+        return new Cliente(id, nombre, apellido, sexo, edad);
     }
-    return new Cliente(id, nombre, apellido, sexo, edad);
+    else{
+        alert("Ingresar datos");
+    }
+    
 }
 
 function FiltrarSexoPromise(){
