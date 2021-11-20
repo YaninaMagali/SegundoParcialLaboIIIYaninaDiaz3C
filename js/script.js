@@ -1,4 +1,5 @@
 const clientesGlobal = [];
+var filtrado = [];
 const cabeceraParams = ["Id" ,"Nombre", "Apellido", "Sexo", "Edad"];
 
 async function getMaterias(funcionExito, funcionError){
@@ -11,6 +12,12 @@ async function getMaterias(funcionExito, funcionError){
     catch(e){
         console.log("Error: ");
     }
+}
+
+function MostrarPromedioEdadClientesPantalla(promedio){
+
+    var p = document.getElementById("id_input_promedio");
+    p.value = promedio;
 }
 
 function funcionError() {
@@ -37,6 +44,10 @@ function FiltrarSexoPromise(){
     promise.then(Cliente.CargarTablaClientes).catch(funcionError);
 }
 
+function PromedioPromise(){
+    promise = new Promise(Cliente.CalcularPromedioEdad);
+    promise.then(MostrarPromedioEdadClientesPantalla).catch(funcionError);
+}
 
 window.addEventListener("load", function () {
     this.getMaterias();
@@ -59,5 +70,10 @@ window.addEventListener("load", function () {
   var delBtn = document.getElementById("btn_clean");
   delBtn.addEventListener("click", (e)=>{
       Tabla.EliminarElementosLista();
+  });
+
+  var PromedioBtn = document.getElementById("btn_promedio");
+  PromedioBtn.addEventListener("click", (e)=>{
+      this.PromedioPromise();
   });
 });

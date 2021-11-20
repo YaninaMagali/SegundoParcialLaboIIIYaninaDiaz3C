@@ -19,7 +19,7 @@ class Cliente extends Persona{
 
       static FiltrarPorSexo(exito, error) {
       
-        var filtrado = [];
+        //var filtrado = [];
         var sexoSeleccionado = document.getElementById("id_select_sexo").value;
         filtrado = clientesGlobal.filter(cli => cli.sexo == sexoSeleccionado);
         if(typeof filtrado !== 'undefined' && filtrado.length > 0)
@@ -71,4 +71,27 @@ class Cliente extends Persona{
             }
       }
       
+      static CalcularPromedioEdad(exito, error){
+
+        var lista = filtrado;
+        console.log(lista);
+        if(lista.length == 0){
+          lista = clientesGlobal;
+          console.log(lista);
+        }
+
+        var resultado = lista.reduce(function(ini, cli){
+        return ini += cli.edad; 
+        }, 0);
+        if(resultado > 0){
+          //console.log(resultado);
+          //console.log(clientesGlobal.length);
+          var promedio = resultado / lista.length;
+          console.log(promedio);
+          exito(promedio);
+        }
+        else{
+          error(false);
+        }
+      }
 }
