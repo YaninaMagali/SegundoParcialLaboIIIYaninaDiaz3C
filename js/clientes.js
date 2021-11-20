@@ -84,8 +84,6 @@ class Cliente extends Persona{
         return ini += cli.edad; 
         }, 0);
         if(resultado > 0){
-          //console.log(resultado);
-          //console.log(clientesGlobal.length);
           var promedio = resultado / lista.length;
           console.log(promedio);
           exito(promedio);

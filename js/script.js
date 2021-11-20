@@ -32,7 +32,6 @@ function GetDataDelForm(){
     var sexo = document.getElementById("id_sexo").value;
     var edad = document.getElementById("id_edad").value;
 
-    console.log(id);
     if(id != " "){
         id = Cliente.CalcularIdCliente();
     }

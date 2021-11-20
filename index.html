@@ -11,7 +11,7 @@
     <script src="js/tabla.js"></script>
     <link rel="stylesheet" href="css/Estilos.css">
 </head>
-<body>
+<body class="body">
     <div id = "id_form_personas" class="Formulario">
         <label>Id</label> <br>
         <input type="text" id="id_input_id" class="Inputs" disabled> <br>
@@ -34,19 +34,21 @@
         <input type="text" id="id_edad" class="Inputs"> <br>
         <br>
         <br>
-        <div id="divBtn" class="divBtn">
+        <div id="divBtn" class="divBtn" style="text-align: right; width:320px" >
             <input type="button" value="Agregar" class="botonMod" id="btn_add" style="display: block;"/> 
-
             <input type="button" value="Eliminar" class="botonDel" id="btn_delete" style="display: block;"/>                 
             <input type="button" value="Limpiar" class="botonClean" id="btn_clean" style="display: block;"/>      
-    
-            <label>Promedio</label> <br>
+        </div>
+        <br>
+        <label>Promedio</label> <br>
+        <div id="divProm" class="divBtn" style="text-align: right; width:420px" >
+            
             <input type="text" id="id_input_promedio" class="Inputs"> <br>
             <br>
             <input type="button" value="Calcular Promedio" class="botonClean" id="btn_promedio" style="display: block;"/>                            
         </div>
-    </div>
     <div id="id_div_filtros">
+        <br>
         <label >Sexo</label> <br>
         <select name="Sexo" id="id_select_sexo">
             <option value="Male">Male</option>
